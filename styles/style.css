@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+
+    --fonte-primaria: 'Krona One';
+    --fonte-secundaria: 'Montserrat';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.header {
+    margin-left: 19%;
+    display: flex;
+    flex-direction: row;
+    gap: 3.6%;
+}
+
+.header_nav_link {
+    font-size: 1.5rem;
+    font-family: var(--fonte-primaria);
+    margin-top: 12px;
+    padding: 20px 0;   
+    border: solid 1px var(--cor-primaria);
+    border-radius: 6px;
+    transition: 0.5s ease;
+
+}
+
+.header_nav_link:hover {
+    background-color: var(--cor-terciaria);
+    border-color: var(--cor-terciaria);
+}
+
+.presentation {
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 92px;
+}
+
+.presentation_text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentation_text_title {
+    font-size: 2.5rem;
+    line-height: 56px;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+}
+
+.presentation_text_title_colored {
+    color: var(--cor-terciaria);
+}
+
+.presentation_text_description {
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 36px;
+}
+
+.my_photo {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.presentation_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentation__links__nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    transition: 0.3s ease;
+}
+
+.presentation__links__nav:hover {
+    background-color: var(--cor-terciaria);
+}
+
+
+.footer {
+    background-color: var(--cor-terciaria);
+    padding: 1.4%;
+    display: flex;
+    justify-content: center;
+    text-align: center  ;
+}
