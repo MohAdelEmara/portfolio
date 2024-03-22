@@ -36,7 +36,6 @@ body{
     border: solid 1px var(--cor-primaria);
     border-radius: 6px;
     transition: 0.5s ease;
-
 }
 
 .header_nav_link:hover {
@@ -62,13 +61,6 @@ body{
     gap: 92px;
 }
 
-.presentation_text {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
 .presentation_text_title {
     font-size: 3.9rem;
     line-height: 76px;
@@ -79,13 +71,6 @@ body{
 
 .presentation_text_title_colored {
     color: var(--cor-terciaria);
-}
-
-.presentation_text_description {
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 36px;
 }
 
 .presentation_photo {
@@ -111,31 +96,6 @@ body{
   .presentation_photo:hover .photo_hover {
     opacity: 1; /* Show the second image on hover */
   }
-
-.presentation_links {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
-}
-
-.presentation__links__nav {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    border: 2px solid var(--cor-terciaria);
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 21.5px 0;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    font-family: var(--fonte-secundaria);
-    transition: 0.3s ease;
-}
 
 .presentation__links__nav:hover {
     background-color: var(--cor-terciaria);
@@ -176,6 +136,9 @@ body{
     display: flex;
     justify-content: center;
     text-align: center  ;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.25rem;
 }
 @media screen and (min-width: 1470px ) {
     
