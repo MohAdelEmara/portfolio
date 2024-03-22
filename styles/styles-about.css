@@ -22,10 +22,9 @@ body{
 }
 
 .header {
-    margin-left: 19%;
     display: flex;
     flex-direction: row;
-    gap: 9.6%;
+    gap: 1.6%;
 }
 
 .header_nav_link {
@@ -43,36 +42,38 @@ body{
     background-color: var(--cor-terciaria);
     border-color: var(--cor-terciaria);
 }
+.links:hover {
+    color: var(--cor-primaria);
+}
+
 .links,
 .links::after {
     text-decoration: none;
     color: var(--cor-secundaria);
 }
 
-.links:hover {
-    color: var(--cor-primaria);
-}
-
 .presentation {
     padding: 5% 15%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 92px;
 }
 
 .presentation_text {
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
 .presentation_text_title {
-    font-size: 2.5rem;
-    line-height: 56px;
+    font-size: 3.9rem;
+    line-height: 76px;
     font-weight: 400;
     font-family: var(--fonte-primaria);
+    text-align: center;
 }
 
 .presentation_text_title_colored {
@@ -86,10 +87,29 @@ body{
     line-height: 36px;
 }
 
-.my_photo {
+.presentation_photo {
+    margin-bottom: 1000px;
+    position: relative;
+    width: 100%;
+}
+.my_photo, .photo_hover {
+    position: absolute;
     width: 100%;
     border-radius: 5%;
+    transition: opacity 0.5s ease-in-out; 
 }
+
+.photo_hover {
+    opacity: 0;
+}
+
+.presentation_photo:hover .my_photo {
+    opacity: 0; /* Hide the first image on hover */
+  }
+  
+  .presentation_photo:hover .photo_hover {
+    opacity: 1; /* Show the second image on hover */
+  }
 
 .presentation_links {
     display: flex;
@@ -120,6 +140,34 @@ body{
     background-color: var(--cor-terciaria);
 }
 
+.accordion-item {
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color:var(--cor-primaria); 
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria); 
+  }
+
+  .accordion-item .accordion-button {
+    font-family: var(--fonte-primaria);
+    font-size: 1.55rem;
+    background-color: var(--cor-primaria); 
+    color:var(--cor-secundaria);
+    padding: 4%;
+  }
+
+  .accordion-button:hover {
+    background-color: var(--cor-terciaria); 
+    color: #000000;
+  }
+
+  .accordion-item .accordion-body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria); 
+    font-size: 1.45rem;
+    padding: 4%;
+
+  }
 
 .footer {
     background-color: var(--cor-terciaria);
@@ -128,7 +176,28 @@ body{
     justify-content: center;
     text-align: center  ;
 }
+@media screen and (min-width: 1470px ) {
+    
+    .presentation {
+        padding: 5% 15%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    }
 
+    .my_photo {
+        width: 100%;
+        margin-bottom: 110%;
+        border-radius: 5%;
+    }
+
+    .presentation_text {
+        margin-top: 20%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
 /*laptop*/
 @media screen and (max-width: 1440px ) {
     
@@ -160,9 +229,8 @@ body{
         padding: 15% 15%;
         display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: space-between;
-        gap: 92px;
     }
 
     .my_photo {
@@ -171,30 +239,24 @@ body{
     }
 
     .presentation_text {
-        margin-top: -90%;
+        margin-top: -60%;
         width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
         text-align: center;
     }
-    .header {
-        margin-left: 10%;
-        display: flex;
-        flex-direction: row;
-        gap: 9.6%;
-    }
 }
 
 /*mobile*/
-@media  (min-width: 320px ) and (max-width: 767px) {
+@media  (max-width: 767px) {
 
     .header {
         margin-left: 1%;
         display: flex;
         flex-direction: column;
         text-align: center;
-        gap: 3.6%;
+        gap: 1.6%;
         
     }
     
@@ -212,8 +274,9 @@ body{
         padding: 15% 10%;
         display: flex;
         align-items: center;
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: space-between;
+        
     }
 
     .my_photo {
@@ -222,7 +285,7 @@ body{
     }
 
     .presentation_text {
-        margin-top: -110%;
+        margin-top: -160%;
         margin-left:3%;
         width: 115%;
         display: flex;
@@ -248,3 +311,4 @@ body{
         transition: 0.3s ease;
     }
 }
+
